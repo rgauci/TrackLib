@@ -19,4 +19,11 @@ public class AnswerOption {
         this.option = option;
     }
     
+    public String getOption() {
+        return this.option;
+    }
+    
+    public int getOptionId() {
+        return this.optionId;
+    }
 }

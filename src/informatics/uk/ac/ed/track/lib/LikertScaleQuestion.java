@@ -11,15 +11,15 @@ import java.util.ArrayList;
  *
  * @author Rachel
  */
-public class LikertScaleQuestion extends EsmQuestion implements Branchable {
+public class LikertScaleQuestion extends TrackQuestion implements Branchable {
  
     private boolean isBranchable;
     private ArrayList<BranchableAnswerOption> answerOptions;
     
-    public LikertScaleQuestion(int id, 
+    public LikertScaleQuestion(int id, String columnName,
             boolean isBranchable, 
             ArrayList<BranchableAnswerOption> answerOptions) {
-        super(id, QuestionType.LIKERT_SCALE);
+        super(id, TrackQuestionType.LIKERT_SCALE, columnName);
         this.setIsBranchable(isBranchable);
         this.setAnswerOptions(answerOptions);
     }

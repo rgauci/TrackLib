@@ -11,21 +11,20 @@ import java.util.ArrayList;
  *
  * @author Rachel
  */
-public abstract class MultipleChoiceQuestion extends EsmQuestion {
+public abstract class MultipleChoiceQuestion extends TrackQuestion {
     
-    private final MultipleChoiceQuestionType multiChoiceQuestionType;
     private boolean addOther;
     
     public MultipleChoiceQuestion(
             int id, 
-            MultipleChoiceQuestionType multiChoiceQuestionType,
+            TrackQuestionType questionType,
+            String columnName,
             boolean addOther) {
-        super(id, QuestionType.MULTIPLE_CHOICE);
-        this.multiChoiceQuestionType = multiChoiceQuestionType;
+        super(id, questionType, columnName);
         this.setAddOther(addOther);
     }
     
-    public boolean getAddOther(boolean value) {
+    public boolean getAddOther() {
         return this.addOther;
     }
     

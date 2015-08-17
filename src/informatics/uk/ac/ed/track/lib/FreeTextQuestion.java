@@ -10,15 +10,23 @@ package informatics.uk.ac.ed.track.lib;
  * Question text is required.
  * @author Rachel
  */
-public class FreeTextQuestion extends EsmQuestion {
+public abstract class FreeTextQuestion extends TrackQuestion {
     
-    private FreeTextQuestionType freeTextType;
+    private int characterLimit;
     
-    public FreeTextQuestion (int id, FreeTextQuestionType freeTextType,
-            String questionText) {
-        super(id, QuestionType.FREE_TEXT);
-        this.freeTextType = freeTextType;
+    public FreeTextQuestion (int id, TrackQuestionType questionType,
+            String columnName, String questionText, int characterLimit) {
+        super(id, questionType, columnName);
         this.setQuestionText(questionText);
+        this.setCharacterLimit(characterLimit);
+    }
+    
+    public void setCharacterLimit(int value){
+        this.characterLimit = value;
+    }
+    
+    public int getCharacterLimit(){
+        return this.characterLimit;
     }
                  
 }

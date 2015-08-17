@@ -24,4 +24,8 @@ public class BranchableAnswerOption extends AnswerOption {
         this.nextQuestionId = nextQuestionId;
     }
     
+    public int getNextQuestionId() {
+        return this.nextQuestionId;
+    }
+    
 }
